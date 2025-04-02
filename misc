@@ -1,0 +1,87 @@
+<li class="nav-item dropdown">
+                            <!-- Replace your current dropdown menu with this code -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#shop-by-category" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Products
+                                </a>
+                                <div class="dropdown-menu mega-menu" aria-labelledby="productsDropdown">
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Wigs</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Human</a></li>
+                                                        <li><a class="dropdown-item" href="#">Synthetic</a></li>
+                                                        <li><a class="dropdown-item" href="#">Human mix</a></li>
+                                                    </ul> -->
+                                                </div>
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Weaves</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Human</a></li>
+                                                        <li><a class="dropdown-item" href="#">Synthetic</a></li>
+                                                    </ul> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Braids</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Braiding hair</a></li>
+                                                        <li><a class="dropdown-item" href="#">Crochet Hair</a></li>
+                                                        <li><a class="dropdown-item" href="#">Bulk Hair</a></li>
+                                                    </ul> -->
+                                                </div>
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Hair Pieces</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Clip-ins</a></li>
+                                                        <li><a class="dropdown-item" href="#">27-pieces</a></li>
+                                                        <li><a class="dropdown-item" href="#">Ponytails & Buns</a></li>
+                                                        <li><a class="dropdown-item" href="#">Edge Toppers</a></li>
+                                                        <li><a class="dropdown-item" href="#">Bang Pieces</a></li>
+                                                    </ul> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Hair Care</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">For Women</a></li>
+                                                        <li><a class="dropdown-item" href="#">For Men</a></li>
+                                                    </ul> -->
+                                                </div>
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Skin Care</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Soaps</a></li>
+                                                        <li><a class="dropdown-item" href="#">Face Cleanser</a></li>
+                                                        <li><a class="dropdown-item" href="#">Face Cream</a></li>
+                                                        <li><a class="dropdown-item" href="#">Body Lotion</a></li>
+                                                    </ul> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Tools and Brushes</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Clippers and Trimmers</a></li>
+                                                        <li><a class="dropdown-item" href="#">Blow Dryers</a></li>
+                                                        <li><a class="dropdown-item" href="#">Flat Irons</a></li>
+                                                        <li><a class="dropdown-item" href="#">Curling Irons</a></li>
+                                                    </ul> -->
+                                                </div>
+                                                <div class="mega-menu-section">
+                                                    <h5 class="dropdown-header">Accessories & Eyelash</h5>
+                                                    <!-- <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Hair Accessories</a></li>
+                                                        <li><a class="dropdown-item" href="#">Ruby Kisses Eyelash</a></li>
+                                                        <li><a class="dropdown-item" href="#">Broadway Eyelash</a></li>
+                                                    </ul> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>

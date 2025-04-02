@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Kings Beauty - Our Story & Mission</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    
+    <style>
+        /* Additional styles specific to About page */
+        .about-hero {
+            background-color: #f9f7f2;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .about-story {
+            padding: 5rem 0;
+        }
+        
+        .store-gallery {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+        }
+        
+        .store-image {
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .store-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .team-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Copy from your existing navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Kings Beauty Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Wigs</a></li>
+                            <li><a class="dropdown-item" href="#">Weaves</a></li>
+                            <li><a class="dropdown-item" href="#">Braids</a></li>
+                            <li><a class="dropdown-item" href="#">Hair Pieces</a></li>
+                            <li><a class="dropdown-item" href="#">Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#">Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#">Tools and Brushes</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            <li><a class="dropdown-item" href="#">Eyelash</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="section-header">
+                <h1>About Kings Beauty</h1>
+                <p>Empowering Beauty, Celebrating Individuality</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-story">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-header text-start">
+                        <h2>Our Story</h2>
+                    </div>
+                    <p>Kings Beauty was founded in 2015 with a simple yet powerful mission: to celebrate and enhance the unique beauty of every individual. What started as a small salon has grown into a comprehensive beauty destination, offering premium hair, skin, and beauty products.</p>
+                    <p>Our journey began when our founder, [Founder's Name], recognized the need for high-quality, inclusive beauty solutions that cater to diverse hair textures and skin types. We believe that beauty is not about conforming to standards, but about expressing your authentic self.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/api/placeholder/600/400" alt="Kings Beauty Founders" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p>Committed to Quality, Diversity, and Empowerment</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Inclusivity</h3>
+                    <p>Providing beauty solutions that celebrate diversity and individual uniqueness.</p>
+                </div>
+                <div class="col-md-4 benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>Offering premium products and services that meet the highest standards.</p>
+                </div>
+                <div class="col-md-4 benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Building a supportive community that empowers and uplifts each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Gallery Section -->
+    <section class="store-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Store</h2>
+                <p>A Glimpse into Our Beauty Haven</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/api/placeholder/400/300" alt="Store Interior" class="img-fluid store-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="/api/placeholder/400/300" alt="Product Display" class="img-fluid store-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="/api/placeholder/400/300" alt="Consultation Area" class="img-fluid store-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
+                <p>The Passionate Professionals Behind Kings Beauty</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="/api/placeholder/300/300" alt="Team Member">
+                    <h3>qwerty qaef</h3>
+                    <p>Bussiness Owner</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="/api/placeholder/300/300" alt="Team Member">
+                    <h3>abcdef</h3>
+                    <p>Mnagaer</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <img src="../logo-png.png" alt="Kings Beauty Logo" class="footer-logo">
+                        <p class="mt-3">Kings Beauty is your premier destination for high-quality wigs, virgin hair, hair care products, and accessories to keep you looking your best.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#shop-by-category">Shop</a></li>
+                        <!-- <li><a href="sale.html">Sale</a></li> -->
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 1638 E 63rd St, Kansas City, MO 64110</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@kingsbeauty.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Wed: 9AM-7PM, Thu-Sat: 9AM-8PM, Sun 11AM-6PM</li>
+                    </ul>
+                
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">&copy; 2025 Kings Beauty. All rights reserved.</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

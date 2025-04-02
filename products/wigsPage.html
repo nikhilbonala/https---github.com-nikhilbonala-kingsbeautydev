@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Beauty - Wig Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .wig-category-nav {
+            position: sticky;
+            top: 80px;
+            z-index: 10;
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .wig-category-nav .nav-pills .nav-link {
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        .wig-category-nav .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        #product-modal .modal-content {
+            background-color: rgba(255,255,255,0.95);
+        }
+        #product-modal .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #product-modal .modal-image {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Same as previous version) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../logo.png" alt="Kings Beauty Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#">Products</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Wigs</a></li>
+                            <li><a class="dropdown-item" href="#">Weaves</a></li>
+                            <li><a class="dropdown-item" href="#">Braids</a></li>
+                            <li><a class="dropdown-item" href="#">Hair Pieces</a></li>
+                            <li><a class="dropdown-item" href="#">Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#">Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#">Tools and Brushes</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            <li><a class="dropdown-item" href="#">Eyelash</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Wig Categories Navigation -->
+    <div class="wig-category-nav">
+        <div class="container">
+            <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#human-wigs">Human Hair</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#synthetic-wigs">Synthetic Hair</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#humanmix-wigs">Human Mix</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section for Wigs -->
+    <section class="hero-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Wig Collection</h2>
+                <p>Discover our premium wig selections tailored for every style and occasion</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wig Categories Section -->
+    <section class="featured-products-section">
+        <div class="container">
+            <div class="row">
+                <!-- Human Hair Wigs -->
+                <div id="human-wigs" class="col-12 mb-5">
+                    <h3 class="mb-4" style="font-size: 1.5rem; color: var(--secondary-color);">Human Hair Wigs</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-1.jpg" data-title="Classic Sleek Straight Wig" data-price="$249.99">
+                                <img src="straight-wig-1.jpg" alt="Classic Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Classic Sleek Straight Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$249.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-2.jpg" data-title="Long Straight Wig" data-price="$199.99">
+                                <img src="straight-wig-2.jpg" alt="Long Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Long Silky Straight Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$199.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-3.jpg" data-title="Mid-Length Straight Wig" data-price="$279.99">
+                                <img src="straight-wig-3.jpg" alt="Mid-Length Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Mid-Length Professional Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$279.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-1.jpg" data-title="Classic Sleek Straight Wig" data-price="$249.99">
+                                <img src="straight-wig-1.jpg" alt="Classic Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Classic Sleek Straight Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$249.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-2.jpg" data-title="Long Straight Wig" data-price="$199.99">
+                                <img src="straight-wig-2.jpg" alt="Long Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Long Silky Straight Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$199.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-3.jpg" data-title="Mid-Length Straight Wig" data-price="$279.99">
+                                <img src="straight-wig-3.jpg" alt="Mid-Length Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Mid-Length Professional Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$279.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-1.jpg" data-title="Classic Sleek Straight Wig" data-price="$249.99">
+                                <img src="straight-wig-1.jpg" alt="Classic Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Classic Sleek Straight Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$249.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-2.jpg" data-title="Long Straight Wig" data-price="$199.99">
+                                <img src="straight-wig-2.jpg" alt="Long Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Long Silky Straight Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$199.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="straight-wig-3.jpg" data-title="Mid-Length Straight Wig" data-price="$279.99">
+                                <img src="straight-wig-3.jpg" alt="Mid-Length Straight Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Mid-Length Professional Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$279.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- synthetic Hair Wigs -->
+                <div id="synthetic-wigs" class="col-12 mb-5">
+                    <h3 class="mb-4" style="font-size: 1.5rem; color: var(--secondary-color);">Synthetic Hair Wigs</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-1.jpg" data-title="Natural Curl Wig" data-price="$269.99">
+                                <img src="curly-wig-1.jpg" alt="Natural Curl Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Natural Bouncy Curl Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$269.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-2.jpg" data-title="Deep Wave Wig" data-price="$229.99">
+                                <img src="curly-wig-2.jpg" alt="Deep Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Deep Wave Luxe Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$229.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-3.jpg" data-title="Tight Spiral Curl Wig" data-price="$299.99">
+                                <img src="curly-wig-3.jpg" alt="Tight Spiral Curl Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Tight Spiral Curl Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$299.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-1.jpg" data-title="Natural Curl Wig" data-price="$269.99">
+                                <img src="curly-wig-1.jpg" alt="Natural Curl Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Natural Bouncy Curl Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$269.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-2.jpg" data-title="Deep Wave Wig" data-price="$229.99">
+                                <img src="curly-wig-2.jpg" alt="Deep Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Deep Wave Luxe Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$229.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-3.jpg" data-title="Tight Spiral Curl Wig" data-price="$299.99">
+                                <img src="curly-wig-3.jpg" alt="Tight Spiral Curl Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Tight Spiral Curl Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$299.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-1.jpg" data-title="Natural Curl Wig" data-price="$269.99">
+                                <img src="curly-wig-1.jpg" alt="Natural Curl Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Natural Bouncy Curl Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$269.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-2.jpg" data-title="Deep Wave Wig" data-price="$229.99">
+                                <img src="curly-wig-2.jpg" alt="Deep Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Deep Wave Luxe Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$229.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="curly-wig-3.jpg" data-title="Tight Spiral Curl Wig" data-price="$299.99">
+                                <img src="curly-wig-3.jpg" alt="Tight Spiral Curl Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Tight Spiral Curl Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$299.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- humanmix Wigs -->
+                <div id="humanmix-wigs" class="col-12 mb-5">
+                    <h3 class="mb-4" style="font-size: 1.5rem; color: var(--secondary-color);">Human Mix Hair Wigs</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-1.jpg" data-title="Beach Wave Wig" data-price="$239.99">
+                                <img src="wavy-wig-1.jpg" alt="Beach Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Beach Wave Soft Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$239.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-2.jpg" data-title="Soft Ocean Wave Wig" data-price="$219.99">
+                                <img src="wavy-wig-2.jpg" alt="Soft Ocean Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Soft Ocean Wave Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$219.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-3.jpg" data-title="Loose Wave Elegant Wig" data-price="$259.99">
+                                <img src="wavy-wig-3.jpg" alt="Loose Wave Elegant Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Loose Wave Elegant Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$259.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-1.jpg" data-title="Beach Wave Wig" data-price="$239.99">
+                                <img src="wavy-wig-1.jpg" alt="Beach Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Beach Wave Soft Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$239.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-2.jpg" data-title="Soft Ocean Wave Wig" data-price="$219.99">
+                                <img src="wavy-wig-2.jpg" alt="Soft Ocean Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Soft Ocean Wave Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$219.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-3.jpg" data-title="Loose Wave Elegant Wig" data-price="$259.99">
+                                <img src="wavy-wig-3.jpg" alt="Loose Wave Elegant Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Loose Wave Elegant Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$259.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-1.jpg" data-title="Beach Wave Wig" data-price="$239.99">
+                                <img src="wavy-wig-1.jpg" alt="Beach Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Beach Wave Soft Wig</h4>
+                                    <p class="product-category">Human Hair Blend</p>
+                                    <p class="product-price">$239.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-2.jpg" data-title="Soft Ocean Wave Wig" data-price="$219.99">
+                                <img src="wavy-wig-2.jpg" alt="Soft Ocean Wave Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Soft Ocean Wave Wig</h4>
+                                    <p class="product-category">Premium Synthetic</p>
+                                    <p class="product-price">$219.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card product-modal-trigger" data-bs-toggle="modal" data-bs-target="#product-modal" 
+                                 data-image="wavy-wig-3.jpg" data-title="Loose Wave Elegant Wig" data-price="$259.99">
+                                <img src="wavy-wig-3.jpg" alt="Loose Wave Elegant Wig" class="product-image">
+                                <div class="product-info">
+                                    <h4 class="product-title">Loose Wave Elegant Wig</h4>
+                                    <p class="product-category">Human Hair</p>
+                                    <p class="product-price">$259.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="product-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="product-modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="product-modal-image" class="modal-image" src="" alt="Product Image">
+                </div>
+                <div class="modal-footer">
+                    <p id="product-modal-price" class="me-auto"></p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of the page remains the same as previous version -->
+    <!-- Newsletter Section -->
+    <!-- <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Stay Updated</h2>
+                        <p>Subscribe to our newsletter for exclusive offers and updates</p>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer (same as previous version) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <img src="../logo-png.png" alt="Kings Beauty Logo" class="footer-logo">
+                        <p class="mt-3">Kings Beauty is your premier destination for high-quality wigs, virgin hair, hair care products, and accessories to keep you looking your best.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#shop-by-category">Shop</a></li>
+                        <!-- <li><a href="sale.html">Sale</a></li> -->
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 1638 E 63rd St, Kansas City, MO 64110</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@kingsbeauty.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Wed: 9AM-7PM, Thu-Sat: 9AM-8PM, Sun 11AM-6PM</li>
+                    </ul>
+                
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">&copy; 2025 Kings Beauty. All rights reserved.</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to handle product modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-modal-trigger');
+            const productModalImage = document.getElementById('product-modal-image');
+            const productModalTitle = document.getElementById('product-modal-title');
+            const productModalPrice = document.getElementById('product-modal-price');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const image = this.getAttribute('data-image');
+                    const title = this.getAttribute('data-title');
+                    const price = this.getAttribute('data-price');
+
+                    productModalImage.src = image;
+                    productModalImage.alt = title;
+                    productModalTitle.textContent = title;
+                    productModalPrice.textContent = price;
+                });
+            });
+
+            // Smooth scrolling for category navigation
+            const categoryLinks = document.querySelectorAll('.wig-category-nav .nav-link');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    // Remove active class from all links
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+
+                    // Scroll to section
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

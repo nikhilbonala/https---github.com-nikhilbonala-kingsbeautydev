@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Menu Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Ensure mega menu appears on hover */
+/* .nav-container:hover .mega-menew {
+    display: block;
+} */
+
+
+        .main-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            height: 60px;
+        }
+
+        
+
+        .main-menu :hover .mega-menew{
+            display: block;
+        }
+
+        .menu-button {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        
+        
+
+        .menu-button:hover  {
+            background-color: white;
+            
+        }
+
+        .menu-icon {
+            margin-right: 10px;
+        }
+
+        /* Mega Menu */
+        .mega-menew {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1000;
+            border-top: 3px solid #ff6b6b;
+        }
+
+        .mega-menew.active {
+            display: block;
+        }
+
+        .menu-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Category columns */
+        .category {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+
+        .category-title {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .subcategory {
+            margin-bottom: 15px;
+        }
+        
+        .subcategory-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .sub-subcategory {
+            margin-bottom: 15px;
+        }
+
+        .sub-subcategory-title {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .menu-item {
+            display: block;
+            padding: 5px 0;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu-item:hover {
+            color: #ff6b6b;
+        }
+        
+        /* Mobile Styles */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .anotherbutton{
+            color: pink;
+        }
+
+        @media (max-width: 768px) {
+            .menu-button span:not(.menu-icon) {
+                display: none;
+            }
+            
+            .mobile-menu-button {
+                display: block;
+            }
+            
+            .mega-menew {
+                overflow-y: auto;
+                max-height: 80vh;
+            }
+            
+            .menu-content {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .category {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .subcategory-items, .sub-subcategory-items, .item-list {
+                display: none;
+            }
+            
+            .subcategory-items.active, .sub-subcategory-items.active, .item-list.active {
+                display: block;
+            }
+            
+            .category-title, .subcategory-title, .sub-subcategory-title {
+                position: relative;
+                padding-right: 20px;
+            }
+            
+            .category-title:after, .subcategory-title:after, .sub-subcategory-title:after {
+                content: '+';
+                position: absolute;
+                right: 5px;
+            }
+            
+            .category-title.active:after, .subcategory-title.active:after, .sub-subcategory-title.active:after {
+                content: '-';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="main-menu">
+                <button class="menu-button" id="menuToggle">
+                    <span class="menu-icon">☰</span>
+                    <span>PRODUCTS</span>
+                </button>
+                <button class="mobile-menu-button" id="mobileMenuToggle">☰</button>
+            </div>
+            <div class="anotherbutton">
+                <button>button1</button>
+            </div>
+            <div class="mega-menew" id="megamenew">
+                <div class="menu-content">
+                    <!-- Wigs Category -->
+                    <div class="category">
+                        <div class="category-title">Wigs</div>
+                        <div class="subcategory-items">
+                            <a href="#" class="menu-item">Human</a>
+                            <a href="#" class="menu-item">Synthetic</a>
+                            <a href="#" class="menu-item">Human mix</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Weaves Category -->
+                    <div class="category">
+                        <div class="category-title">Weaves</div>
+                        <div class="subcategory-items">
+                            <a href="#" class="menu-item">Human</a>
+                            <a href="#" class="menu-item">Synthetic</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Braids Category -->
+                    <div class="category">
+                        <div class="category-title">Braids</div>
+                        <div class="subcategory-items">
+                            <a href="#" class="menu-item">Braiding hair</a>
+                            <a href="#" class="menu-item">Crochet Hair</a>
+                            <a href="#" class="menu-item">Bulk Hair</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Hair Pieces Category -->
+                    <div class="category">
+                        <div class="category-title">Hair Pieces</div>
+                        <div class="subcategory-items">
+                            <div class="subcategory">
+                                <div class="subcategory-title">Clip-ins</div>
+                                <div class="sub-subcategory-items">
+                                    <a href="#" class="menu-item">Human</a>
+                                    <a href="#" class="menu-item">Synthetic</a>
+                                </div>
+                            </div>
+                            <a href="#" class="menu-item">27-pieces</a>
+                            <a href="#" class="menu-item">Ponytails & Buns</a>
+                            <a href="#" class="menu-item">Edge Toppers</a>
+                            <a href="#" class="menu-item">Bang Pieces</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Hair Care Category -->
+                    <div class="category">
+                        <div class="category-title">Hair Care</div>
+                        <div class="subcategory-items">
+                            <div class="subcategory">
+                                <div class="subcategory-title">FOR WOMEN</div>
+                                <div class="sub-subcategory-items">
+                                    <div class="sub-subcategory">
+                                        <div class="sub-subcategory-title">Hair Products</div>
+                                        <!-- <div class="item-list">
+                                            <a href="#" class="menu-item">Oil</a>
+                                            <a href="#" class="menu-item">Serum</a>
+                                            <a href="#" class="menu-item">Shampoo</a>
+                                            <a href="#" class="menu-item">Conditioner</a>
+                                            <a href="#" class="menu-item">Detangler</a>
+                                            <a href="#" class="menu-item">Moisturizer</a>
+                                            <a href="#" class="menu-item">Hair Masque</a>
+                                            <a href="#" class="menu-item">Texturizer</a>
+                                            <a href="#" class="menu-item">Relaxer and Perm</a>
+                                            <a href="#" class="menu-item">Wig Spray</a>
+                                            <a href="#" class="menu-item">Hair Glue</a>
+                                            <a href="#" class="menu-item">Lace Glue and Tape</a>
+                                            <a href="#" class="menu-item">Hair Grease</a>
+                                        </div> -->
+                                    </div>
+                                    <div class="sub-subcategory">
+                                        <div class="sub-subcategory-title">Styling Products</div>
+                                        <!-- <div class="item-list">
+                                            <a href="#" class="menu-item">Braid Spray</a>
+                                            <a href="#" class="menu-item">Curl Activator</a>
+                                            <a href="#" class="menu-item">Hair Dressing</a>
+                                            <a href="#" class="menu-item">Hair Gel</a>
+                                            <a href="#" class="menu-item">Braiding Gel</a>
+                                            <a href="#" class="menu-item">Loc and Twist Gels</a>
+                                            <a href="#" class="menu-item">Edge Control</a>
+                                            <a href="#" class="menu-item">Styling Wax</a>
+                                            <a href="#" class="menu-item">Hair Powder</a>
+                                            <a href="#" class="menu-item">Holding Spray</a>
+                                            <a href="#" class="menu-item">Setting Lotion</a>
+                                            <a href="#" class="menu-item">Mousse</a>
+                                            <a href="#" class="menu-item">Spritzs</a>
+                                            <a href="#" class="menu-item">Oil Sheen</a>
+                                            <a href="#" class="menu-item">Thermal Protect</a>
+                                        </div> -->
+                                    </div>
+                                    <div class="sub-subcategory">
+                                        <div class="sub-subcategory-title">Hair Color Products</div>
+                                        <!-- <div class="item-list">
+                                            <a href="#" class="menu-item">Permanent</a>
+                                            <a href="#" class="menu-item">Semi Permanent</a>
+                                            <a href="#" class="menu-item">Hair Bleach</a>
+                                            <a href="#" class="menu-item">Developer</a>
+                                            <a href="#" class="menu-item">Color Wax</a>
+                                            <a href="#" class="menu-item">Hair Color Spray</a>
+                                            <a href="#" class="menu-item">Root Touch-up Spray</a>
+                                            <a href="#" class="menu-item">Lace Tint Spray</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subcategory">
+                                <div class="subcategory-title">FOR MEN</div>
+                                <div class="sub-subcategory-items">
+                                    <div class="sub-subcategory">
+                                        <div class="sub-subcategory-title">Hair & Beard</div>
+                                        <!-- <div class="item-list">
+                                            <a href="#" class="menu-item">Oil</a>
+                                            <a href="#" class="menu-item">Serum</a>
+                                            <a href="#" class="menu-item">Shampoo</a>
+                                            <a href="#" class="menu-item">Conditioner</a>
+                                            <a href="#" class="menu-item">Detangler</a>
+                                            <a href="#" class="menu-item">Moisturizer</a>
+                                            <a href="#" class="menu-item">Texturizer</a>
+                                            <a href="#" class="menu-item">Beard Wash</a>
+                                            <a href="#" class="menu-item">Beard Oil</a>
+                                            <a href="#" class="menu-item">Beard Conditioner</a>
+                                            <a href="#" class="menu-item">Pomades</a>
+                                            <a href="#" class="menu-item">Hair Grease</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skin Care Category -->
+                    <div class="category">
+                        <div class="category-title">Skin Care</div>
+                        <div class="subcategory-items">
+                            <a href="#" class="menu-item">Soaps</a>
+                            <a href="#" class="menu-item">Face Cleanser</a>
+                            <a href="#" class="menu-item">Face Cream</a>
+                            <a href="#" class="menu-item">Body Lotion</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools and Brushes Category -->
+                    <div class="category">
+                        <div class="category-title">Tools and Brushes</div>
+                        <div class="subcategory-items">
+                            <a href="#" class="menu-item">Clippers and Trimmers</a>
+                            <a href="#" class="menu-item">Blow Dryers</a>
+                            <a href="#" class="menu-item">Flat Irons</a>
+                            <a href="#" class="menu-item">Curling Irons</a>
+                            <a href="#" class="menu-item">Hair Rollers</a>
+                            <a href="#" class="menu-item">Flexi Rods</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Accessories Category -->
+                    <div class="category">
+                        <div class="category-title">Accessories</div>
+                        <div class="subcategory-items">
+                            <a href="#" class="menu-item">Hair</a>
+                            <a href="#" class="menu-item">Face</a>
+                            <a href="#" class="menu-item">Studs and Rings</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Eyelash Category -->
+                    <div class="category">
+                        <div class="category-title">Eyelash</div>
+                        <div class="subcategory-items">
+                            <div class="subcategory">
+                                <div class="subcategory-title">Ruby Kisses</div>
+                                <div class="sub-subcategory-items">
+                                    <a href="#" class="menu-item">Individual</a>
+                                    <a href="#" class="menu-item">Lash Strips</a>
+                                </div>
+                            </div>
+                            <div class="subcategory">
+                                <div class="subcategory-title">Broadway</div>
+                                <div class="sub-subcategory-items">
+                                    <a href="#" class="menu-item">Individual</a>
+                                    <a href="#" class="menu-item">Lash Strips</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById("menuToggle");
+const megamenew = document.getElementById("megamenew");
+
+menuButton.addEventListener("mouseenter", () => {
+    megamenew.classList.add("active");
+});
+
+megamenew.addEventListener("mouseleave", () => {
+    megamenew.classList.remove("active");
+});
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const megamenew = document.getElementById('megamenew');
+            
+            // Desktop menu toggle
+            menuToggle.addEventListener('click', function() {
+                megamenew.classList.toggle('active');
+            });
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', function() {
+                megamenew.classList.toggle('active');
+            });
+            
+            // Handle mobile accordions
+            const categoryTitles = document.querySelectorAll('.category-title');
+            const subcategoryTitles = document.querySelectorAll('.subcategory-title');
+            const subSubcategoryTitles = document.querySelectorAll('.sub-subcategory-title');
+            
+            // Mobile-specific functionality for accordion menus
+            if (window.innerWidth <= 768) {
+                categoryTitles.forEach(title => {
+                    title.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        const items = this.nextElementSibling;
+                        items.classList.toggle('active');
+                    });
+                });
+                
+                subcategoryTitles.forEach(title => {
+                    title.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        this.classList.toggle('active');
+                        const items = this.nextElementSibling;
+                        items.classList.toggle('active');
+                    });
+                });
+                
+                subSubcategoryTitles.forEach(title => {
+                    title.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        this.classList.toggle('active');
+                        const items = this.nextElementSibling;
+                        items.classList.toggle('active');
+                    });
+                });
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!menuToggle.contains(event.target) && 
+                    !mobileMenuToggle.contains(event.target) && 
+                    !megamenew.contains(event.target)) {
+                    megamenew.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
